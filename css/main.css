@@ -1,0 +1,217 @@
+body {
+  margin: 0;
+  background-color: #00d580;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.head {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 10px solid #000000;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset -22px 5px 10px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: inset -22px 5px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.head::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  border: 10px solid #000000;
+  background-color: #ffffff;
+  margin-top: 300px;
+}
+
+.left, .right {
+  background-color: #231f20;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left {
+  margin-left: -180px;
+}
+
+.right {
+  margin-left: 180px;
+}
+
+.left::before, .right::before {
+  content: "";
+  position: absolute;
+  background-color: #231f20;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset -22px 5px 10px 3px rgba(255, 255, 255, 0.164);
+          box-shadow: inset -22px 5px 10px 3px rgba(255, 255, 255, 0.164);
+}
+
+.left::after, .right::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.right::after {
+  width: 30px;
+  height: 30px;
+  border: 5px solid #ffffff;
+  background: transparent;
+}
+
+.cutout {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin-bottom: -50px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.mouth {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  border: 10px solid #231f20;
+  position: absolute;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-clip-path: circle(60% at 49% 100%);
+          clip-path: circle(60% at 49% 100%);
+}
+
+.mouth::before, .mouth::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 10px solid #231f20;
+  top: 102px;
+  left: -9px;
+  -webkit-clip-path: circle(50% at 0 0);
+          clip-path: circle(50% at 0 0);
+}
+
+.mouth::after {
+  content: "";
+  position: absolute;
+  top: 107px;
+  left: 140px;
+  -webkit-clip-path: circle(50% at 100% 0);
+          clip-path: circle(50% at 100% 0);
+}
+
+.body {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  border: 10px solid #000000;
+  background-color: #e23417;
+  top: 350px;
+  border-radius: 100% 100% 100% 100% / 100% 100% 0% 0%;
+}
+
+.body::before, .body::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  top: 30px;
+}
+
+.body::before {
+  border-right: 10px solid #000000;
+}
+
+.body::after {
+  border-left: 10px solid #000000;
+  right: 0;
+}
+
+.bg {
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  border-radius: 30%;
+  left: -100px;
+  top: 20px;
+  -webkit-box-shadow: 400px 100px 0 0 rgba(0, 0, 0, 0.15), 50px 150px 0 0 rgba(0, 0, 0, 0.15), 400px 250px 0 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 400px 100px 0 0 rgba(0, 0, 0, 0.15), 50px 150px 0 0 rgba(0, 0, 0, 0.15), 400px 250px 0 0 rgba(0, 0, 0, 0.15);
+  -webkit-animation: bgAnimate 3s infinite alternate;
+          animation: bgAnimate 3s infinite alternate;
+}
+
+@-webkit-keyframes bgAnimate {
+  from {
+    -webkit-box-shadow: 400px 100px 0 0 rgba(0, 0, 0, 0.15), 50px 150px 0 0 rgba(0, 0, 0, 0.15), 400px 250px 0 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 400px 100px 0 0 rgba(0, 0, 0, 0.15), 50px 150px 0 0 rgba(0, 0, 0, 0.15), 400px 250px 0 0 rgba(0, 0, 0, 0.15);
+  }
+  to {
+    -webkit-box-shadow: 450px 100px 0 0 rgba(0, 0, 0, 0.15), 0px 150px 0 0 rgba(0, 0, 0, 0.15), 350px 250px 0 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 450px 100px 0 0 rgba(0, 0, 0, 0.15), 0px 150px 0 0 rgba(0, 0, 0, 0.15), 350px 250px 0 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes bgAnimate {
+  from {
+    -webkit-box-shadow: 400px 100px 0 0 rgba(0, 0, 0, 0.15), 50px 150px 0 0 rgba(0, 0, 0, 0.15), 400px 250px 0 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 400px 100px 0 0 rgba(0, 0, 0, 0.15), 50px 150px 0 0 rgba(0, 0, 0, 0.15), 400px 250px 0 0 rgba(0, 0, 0, 0.15);
+  }
+  to {
+    -webkit-box-shadow: 450px 100px 0 0 rgba(0, 0, 0, 0.15), 0px 150px 0 0 rgba(0, 0, 0, 0.15), 350px 250px 0 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 450px 100px 0 0 rgba(0, 0, 0, 0.15), 0px 150px 0 0 rgba(0, 0, 0, 0.15), 350px 250px 0 0 rgba(0, 0, 0, 0.15);
+  }
+}
+/*# sourceMappingURL=main.css.map */
